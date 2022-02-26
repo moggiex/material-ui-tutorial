@@ -1,4 +1,5 @@
 // Components
+
 import TourCard from '../TourCard/TourCard';
 import SearchAppBar from '../Appbar/Appbar';
 

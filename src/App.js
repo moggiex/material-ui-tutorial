@@ -16,8 +16,9 @@ import './App.css';
 function App() {
   return (
     <>
-      <SearchAppBar />
+
       <Router>
+        <SearchAppBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:tourId" element={<Tour />} />

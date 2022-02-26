@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { makeStyles, styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -84,9 +85,21 @@ export default function SearchAppBar() {
 						variant='h6'
 						noWrap
 						component='div'
-						sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
+						sx={{
+							flexGrow: 1,
+							display: {
+								xs: 'none',
+								sm: 'block',
+								color: '#fff',
+								'text-decoration': 'none',
+							},
+							a: {
+								color: '#fff',
+								'text-decoration': 'none',
+							},
+						}}>
 						<WrapIcon>{/* <AcUnitIcon sx={{ mr: 1 }} /> */}</WrapIcon>
-						Tour Monkey
+						<Link to='/'>Tour Monkey</Link>
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
