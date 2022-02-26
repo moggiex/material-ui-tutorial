@@ -1,27 +1,30 @@
+// Router
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+// Pages
+import Home from './components/pages/Home';
+import SearchAppBar from './components/Appbar/Appbar';
+import Tour from './components/pages/Tour';
+import NotFound from './components/pages/NotFound';
+
 // import logo from './logo.svg';
 import './App.css';
 
-// Components
-import TourCard from './components/TourCard/TourCard'
 
-// Material Ui
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-
-        <Grid container spacing={2}>
-          <TourCard />
-          <TourCard />
-          <TourCard />
-        </Grid>
-
-      </Container>
-    </div>
+    <>
+      <SearchAppBar />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:tourId" element={<Tour />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
